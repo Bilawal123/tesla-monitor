@@ -244,6 +244,10 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
+    .vehicle-card:hover .card-car-img {
+      transform: scale(1.06);
+    }
+
     .vehicle-card.selected {
       background: rgba(22, 28, 45, 0.95);
       border-color: var(--tesla-red);
@@ -754,8 +758,8 @@
       if (isWhite) {
         return `
           <div style="display: flex; align-items: center; justify-content: center; gap: 5px;">
-            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #111827 50%, #f9fafb 50%); border: 1px solid rgba(255,255,255,0.25); flex-shrink: 0;"></span>
-            <span>Black & White</span>
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #f9fafb; border: 1px solid rgba(255,255,255,0.4); flex-shrink: 0; box-shadow: 0 0 3px rgba(255,255,255,0.6);"></span>
+            <span>White</span>
           </div>
         `;
       }
@@ -928,6 +932,11 @@
       const hasInteriorMatch = v.interior.toLowerCase().includes('white');
 
       card.innerHTML = `
+        ${v.imageUrl ? `
+          <div class="card-image-container" style="width: 100%; height: 130px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; background: rgba(0,0,0,0.18); display: flex; align-items: center; justify-content: center;">
+            <img src="${v.imageUrl}" alt="${v.trim}" style="width: auto; height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.4s ease;" class="card-car-img" />
+          </div>
+        ` : ''}
         <div class="card-header">
           <div class="card-title">Model Y ${v.trim}</div>
           <div class="card-price">$${v.price.toLocaleString()}</div>
