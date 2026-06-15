@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesla Model Y 7-Seater Travel Dashboard</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <!-- Google Fonts (Outfit and Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #0b0f17;
+      --bg-card: rgba(22, 28, 45, 0.65);
+      --bg-card-hover: rgba(30, 41, 59, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(232, 33, 39, 0.4);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --tesla-red: #e82127;
+      --tesla-red-glow: rgba(232, 33, 39, 0.25);
+      --available-green: #10b981;
+      --unavailable-red: #ef4444;
+      --gold-home: #fbbf24;
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+
+    /* Layout structure */
+    .sidebar {
+      width: 460px;
+      min-width: 460px;
+      height: 100vh;
+      background: linear-gradient(135deg, #0e1322 0%, #080b12 100%);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .map-container {
+      flex: 1;
+      height: 100vh;
+      position: relative;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+      background-color: #0b0f17;
+    }
+
+    /* Sidebar Header */
+    .sidebar-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(15, 22, 42, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .brand-logo {
+      color: var(--tesla-red);
+      font-weight: 800;
+      font-size: 1.5rem;
+      font-family: var(--font-display);
+      letter-spacing: 2px;
+    }
+
+    .brand-badge {
+      background: var(--tesla-red-glow);
+      color: var(--tesla-red);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      border: 1px solid rgba(232, 33, 39, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sidebar-header h1 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .search-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .search-center svg {
+      color: var(--gold-home);
+    }
+
+    /* Tabs configuration */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(8, 12, 24, 0.3);
+    }
+
+    .tab-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 16px;
+      color: var(--text-muted);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .tab-btn.active {
+      color: var(--text-main);
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      right: 20%;
+      height: 3px;
+      background: var(--tesla-red);
+      border-radius: 3px 3px 0 0;
+      box-shadow: 0 0 10px var(--tesla-red);
+    }
+
+    .tab-count {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+    }
+
+    .tab-btn.active .tab-count {
+      background: var(--tesla-red);
+    }
+
+    /* List Containers */
+    .list-wrapper {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .list-wrapper::-webkit-scrollbar {
+      width: 6px;
+    }
+    .list-wrapper::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .list-wrapper::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+    .list-wrapper::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .vehicle-list {
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .vehicle-list.active {
+      display: flex;
+    }
+
+    /* Vehicle Cards */
+    .vehicle-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+
+    .vehicle-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .vehicle-card.selected {
+      background: rgba(22, 28, 45, 0.95);
+      border-color: var(--tesla-red);
+      box-shadow: 0 0 15px rgba(232, 33, 39, 0.2);
+    }
+
+    .vehicle-card.selected::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--tesla-red);
+      box-shadow: 2px 0 10px var(--tesla-red);
+    }
+
+    /* Card Details */
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.3;
+      max-width: 70%;
+    }
+
+    .card-price {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .vin-badge {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .spec-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 6px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .spec-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      letter-spacing: 0.5px;
+    }
+
+    .spec-val {
+      font-size: 0.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .spec-val.match {
+      color: var(--available-green);
+      font-weight: 600;
+    }
+
+    .match-score-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .score-3 {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--available-green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .score-2 {
+      background: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    .score-1 {
+      background: rgba(156, 163, 175, 0.15);
+      color: #9ca3af;
+      border: 1px solid rgba(156, 163, 175, 0.3);
+    }
+
+    .score-0 {
+      background: rgba(239, 68, 68, 0.1);
+      color: var(--unavailable-red);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+
+    /* Travel metrics style */
+    .travel-section {
+      background: rgba(255, 255, 255, 0.02);
+      border-top: 1px dashed var(--border-color);
+      padding-top: 12px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .travel-metric {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+    }
+
+    .travel-metric.drive {
+      color: #38bdf8;
+    }
+
+    .travel-metric.flight {
+      color: #a78bfa;
+    }
+
+    .travel-icon {
+      font-size: 0.95rem;
+    }
+
+    .location-text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .location-text svg {
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .order-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--tesla-red);
+      color: white;
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 8px;
+      border-radius: 6px;
+      margin-top: 12px;
+      transition: background 0.2s ease;
+    }
+
+    .order-btn:hover {
+      background: #c9171d;
+    }
+
+    /* Map Custom Markers & Popups */
+    .custom-marker {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .marker-pin {
+      width: 20px;
+      height: 20px;
+      border-radius: 50% 50% 50% 0;
+      background: var(--tesla-red);
+      position: absolute;
+      transform: rotate(-45deg);
+      box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+      border: 2px solid white;
+    }
+
+    .marker-pin::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+    }
+
+    .marker-pin.home {
+      background: var(--gold-home);
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--bg-dark);
+      z-index: 1000;
+    }
+
+    .marker-pin.home::after {
+      background: var(--bg-dark);
+      width: 10px;
+      height: 10px;
+      top: 5px;
+      left: 5px;
+    }
+
+    .marker-pin.exact {
+      background: #10b981;
+    }
+
+    .marker-pulse {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(251, 191, 36, 0.2);
+      position: absolute;
+      animation: pulse-ring 2s infinite ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.3);
+        opacity: 1;
+      }
+      80%, 100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* Dark Mode Popups */
+    .leaflet-popup-content-wrapper {
+      background: #0f172a !important;
+      color: var(--text-main) !important;
+      border: 1px solid var(--border-color);
+      border-radius: 12px !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+      padding: 0 !important;
+    }
+
+    .leaflet-popup-content {
+      margin: 12px 16px !important;
+      font-family: var(--font-body) !important;
+    }
+
+    .leaflet-popup-tip {
+      background: #0f172a !important;
+      border: 1px solid var(--border-color);
+    }
+
+    .popup-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .popup-price {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--tesla-red);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .popup-detail {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    /* Empty state */
+    .empty-state {
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    .empty-state svg {
+      margin-bottom: 16px;
+      color: rgba(255, 255, 255, 0.1);
+    }
+
+    .empty-state p {
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar section -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand">
+        <span class="brand-logo">TESLA</span>
+        <span class="brand-badge">Inventory</span>
+      </div>
+      <h1>Model Y 7-Seater</h1>
+      <p style="font-size: 0.85rem; color: var(--text-muted)">Real-time logistics & travel monitor</p>
+      
+      <div class="search-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>
+        <span>Search Center: <b>Gilroy, CA (95020)</b></span>
+      </div>
+    </div>
+
+    <!-- Sidebar tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" id="tab-avail" onclick="switchTab('available')">
+        Available <span class="tab-count" id="count-avail">0</span>
+      </button>
+      <button class="tab-btn" id="tab-unavail" onclick="switchTab('unavailable')">
+        Unavailable <span class="tab-count" id="count-unavail">0</span>
+      </button>
+    </div>
+
+    <!-- Scrollable vehicles container -->
+    <div class="list-wrapper">
+      <div id="list-available" class="vehicle-list active">
+        <!-- Rendered dynamically -->
+      </div>
+      <div id="list-unavailable" class="vehicle-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Map section -->
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Tesla Inventory data payload generated by scrape script -->
+  <script src="data.js"></script>
+
+  <script>
+    // Constants & State
+    const GILROY_COORDS = [37.0058, -121.5682];
+    let map;
+    let markers = {};
+    let activeTab = 'available';
+
+    // Verify raw data loading
+    if (typeof TESLA_INVENTORY === 'undefined') {
+      console.error("TESLA_INVENTORY is not defined! Please run the scraper script first.");
+      document.querySelector('.list-wrapper').innerHTML = `
+        <div class="empty-state">
+          <p style="color: var(--tesla-red)">Error: data.js is missing.</p>
+          <p style="font-size: 0.8rem; margin-top: 8px">Run <code>node index.js</code> or <code>node create_mock_data.js</code> to initialize inventory data.</p>
+        </div>
+      `;
+    }
+
+    // Initialize Map
+    function initMap() {
+      // Map configuration
+      map = L.map('map', {
+        zoomControl: false
+      }).setView(GILROY_COORDS, 7);
+
+      // Add zoom control at bottom-right
+      L.control.zoom({
+        position: 'bottomright'
+      }).addTo(map);
+
+      // CartoDB Dark Matter tile layer
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
+      }).addTo(map);
+
+      // Home Marker (Gilroy)
+      const homeIcon = L.divIcon({
+        className: 'custom-marker',
+        html: `<div class="marker-pin home"></div><div class="marker-pulse"></div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 15]
+      });
+
+      L.marker(GILROY_COORDS, { icon: homeIcon })
+        .addTo(map)
+        .bindPopup(`
+          <div class="popup-title">📌 Search Center</div>
+          <div class="popup-detail">Gilroy, CA 95020</div>
+        `);
+    }
+
+    // Switch between Available and Unavailable tabs
+    function switchTab(tab) {
+      activeTab = tab;
+      
+      // Update UI active buttons
+      document.getElementById('tab-avail').classList.toggle('active', tab === 'available');
+      document.getElementById('tab-unavail').classList.toggle('active', tab === 'unavailable');
+      
+      // Update active list display
+      document.getElementById('list-available').classList.toggle('active', tab === 'available');
+      document.getElementById('list-unavailable').classList.toggle('active', tab === 'unavailable');
+      
+      // Reset selected card
+      document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
+      
+      // Zoom map to fit markers of this tab
+      fitMapBounds();
+    }
+
+    // Helper: Build matching labels
+    function getMatchScoreClass(score) {
+      return `score-${score}`;
+    }
+
+    // Render vehicle lists in sidebar
+    function renderInventory() {
+      const availContainer = document.getElementById('list-available');
+      const unavailContainer = document.getElementById('list-unavailable');
+      
+      availContainer.innerHTML = '';
+      unavailContainer.innerHTML = '';
+
+      const availableList = [];
+      const unavailableList = [];
+
+      TESLA_INVENTORY.forEach(v => {
+        if (v.location !== 'Unavailable' && v.location !== 'Scrape Error') {
+          availableList.push(v);
+        } else {
+          unavailableList.push(v);
+        }
+      });
+
+      // Update counters
+      document.getElementById('count-avail').innerText = availableList.length;
+      document.getElementById('count-unavail').innerText = unavailableList.length;
+
+      // Available Render
+      if (availableList.length === 0) {
+        availContainer.innerHTML = `
+          <div class="empty-state">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            </svg>
+            <p>No available 7-seater vehicles found in this ZIP range.</p>
+          </div>
+        `;
+      } else {
+        availableList.forEach(v => {
+          availContainer.appendChild(createVehicleCard(v, true));
+          addMapMarker(v);
+        });
+      }
+
+      // Unavailable Render
+      if (unavailableList.length === 0) {
+        unavailContainer.innerHTML = `
+          <div class="empty-state">
+            <p>No unavailable vehicles found in query.</p>
+          </div>
+        `;
+      } else {
+        unavailableList.forEach(v => {
+          unavailContainer.appendChild(createVehicleCard(v, false));
+        });
+      }
+    }
+
+    // Create Leaflet map marker for a vehicle
+    function addMapMarker(v) {
+      if (!v.coordinates || !v.coordinates[0] || !v.coordinates[1]) return;
+
+      const isExact = v.similarityScore === 3;
+      const markerClass = isExact ? 'exact' : '';
+      
+      const pinIcon = L.divIcon({
+        className: 'custom-marker',
+        html: `<div class="marker-pin ${markerClass}"></div>`,
+        iconSize: [24, 24],
+        iconAnchor: [12, 12]
+      });
+
+      const marker = L.marker(v.coordinates, { icon: pinIcon })
+        .addTo(map)
+        .bindPopup(`
+          <div class="popup-title">🚗 Model Y ${v.trim}</div>
+          <div class="popup-price">$${v.price.toLocaleString()}</div>
+          <div class="popup-detail"><b>Pickup:</b> ${v.location.split(' (')[0]}</div>
+          <div class="popup-detail"><b>Travel Drive:</b> ${v.driveTime}</div>
+          <div class="popup-detail"><b>Travel Flight:</b> ${v.flightTime}</div>
+          <div class="popup-detail"><b>Similarity:</b> ${v.similarityScore}/3 matches</div>
+          <a href="${v.url}" target="_blank" style="display:inline-block; margin-top:8px; font-size:11px; font-weight:700; color:var(--tesla-red); text-decoration:none;">ORDER DETAILS &rarr;</a>
+        `);
+
+      // Link marker interaction back to sidebar card
+      marker.on('click', () => {
+        highlightVehicleCard(v.vin);
+      });
+
+      markers[v.vin] = marker;
+    }
+
+    // Highlight sidebar card when map marker is clicked
+    function highlightVehicleCard(vin) {
+      // Find card element
+      const card = document.getElementById(`card-${vin}`);
+      if (!card) return;
+
+      // Select card
+      document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+
+      // Scroll sidebar list to this card
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Center map & open popup when card is clicked
+    function focusOnVehicle(vin, lat, lng) {
+      // Highlight card
+      document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
+      const card = document.getElementById(`card-${vin}`);
+      if (card) card.classList.add('selected');
+
+      // Fly map to coordinates if available
+      if (lat && lng && markers[vin]) {
+        map.flyTo([lat, lng], 10, {
+          duration: 1.5
+        });
+        
+        // Open popup
+        setTimeout(() => {
+          markers[vin].openPopup();
+        }, 1200);
+      }
+    }
+
+    // Automatically zoom map to fit all loaded markers
+    function fitMapBounds() {
+      const activeMarkers = [];
+      
+      // Include home point
+      activeMarkers.push(L.latLng(GILROY_COORDS));
+
+      if (activeTab === 'available') {
+        Object.entries(markers).forEach(([vin, marker]) => {
+          activeMarkers.push(marker.getLatLng());
+        });
+      }
+
+      if (activeMarkers.length > 1) {
+        const bounds = L.latLngBounds(activeMarkers);
+        map.fitBounds(bounds, { padding: [50, 50] });
+      } else {
+        map.setView(GILROY_COORDS, 7);
+      }
+    }
+
+    // Helper: Create vehicle list element
+    function createVehicleCard(v, isAvailable) {
+      const card = document.createElement('div');
+      card.className = `vehicle-card`;
+      card.id = `card-${v.vin}`;
+      
+      const [lat, lng] = v.coordinates || [null, null];
+      card.onclick = () => focusOnVehicle(v.vin, lat, lng);
+
+      // Parse matches to determine tags
+      const hasPaintMatch = v.paint.toLowerCase().includes('red');
+      const hasWheelsMatch = v.wheels.toLowerCase().includes('19');
+      const hasInteriorMatch = v.interior.toLowerCase().includes('white');
+
+      card.innerHTML = `
+        <div class="card-header">
+          <div class="card-title">Model Y ${v.trim}</div>
+          <div class="card-price">$${v.price.toLocaleString()}</div>
+        </div>
+        
+        <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+          <span class="match-score-badge ${getMatchScoreClass(v.similarityScore)}">
+            ★ ${v.similarityScore}/3 Match
+          </span>
+          <span class="vin-badge">${v.vin.slice(0, 10)}...${v.vin.slice(-5)}</span>
+        </div>
+
+        <div class="specs-grid">
+          <div class="spec-item">
+            <div class="spec-label">Paint</div>
+            <div class="spec-val ${hasPaintMatch ? 'match' : ''}" title="${v.paint}">${v.paint}</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Wheels</div>
+            <div class="spec-val ${hasWheelsMatch ? 'match' : ''}" title="${v.wheels}">${v.wheels.replace('’’', '"')}</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Interior</div>
+            <div class="spec-val ${hasInteriorMatch ? 'match' : ''}" title="${v.interior}">${v.interior.split(' ')[0]}</div>
+          </div>
+        </div>
+
+        <div class="location-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+          <span>${v.location}</span>
+        </div>
+
+        ${isAvailable ? `
+          <div class="travel-section">
+            <div class="travel-metric drive" title="Drive time and distance from Gilroy">
+              <span class="travel-icon">🚗</span>
+              <span><b>${v.driveTime.split(' (')[0]}</b> (${v.driveTime.includes('(') ? v.driveTime.split('(')[1].replace(')', '') : ''})</span>
+            </div>
+            <div class="travel-metric flight" title="Flight options to closest major airport">
+              <span class="travel-icon">✈️</span>
+              <span><b>${v.flightTime}</b></span>
+            </div>
+          </div>
+        ` : `
+          <div style="font-size: 0.8rem; color: var(--unavailable-red); margin-top: 8px; font-weight: 500;">
+            ✕ Registration ZIP restricted
+          </div>
+        `}
+
+        <a href="${v.url}" target="_blank" class="order-btn">View Inventory Details</a>
+      `;
+
+      return card;
+    }
+
+    // App Initialization
+    window.onload = () => {
+      initMap();
+      renderInventory();
+      fitMapBounds();
+    };
+  </script>
+</body>
+</html>
