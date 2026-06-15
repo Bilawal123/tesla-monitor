@@ -1,4 +1,4 @@
-const TESLA_INVENTORY = [
+[
   {
     "vin": "7SAY238_57c3b8f722e2e163d654d522752f587e",
     "trim": "Premium All-Wheel Drive",
@@ -247,4 +247,4 @@ const TESLA_INVENTORY = [
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_0d237442e833397ca8160052fea78d8a?titleStatus=new&redirect=no#overview"
   }
-];
+]
