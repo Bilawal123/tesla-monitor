@@ -1,30 +1,5 @@
 const TESLA_INVENTORY = [
   {
-    "vin": "7SAY250_c76a4e47702520b6273ef723772d2878",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 56490,
-    "paint": "Ultra Red",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 3,
-    "matches": [
-      "Ultra Red Paint",
-      "19\" Wheels",
-      "White Interior"
-    ],
-    "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY250_c76a4e47702520b6273ef723772d2878?titleStatus=new&redirect=no#overview"
-  },
-  {
     "vin": "7SAY272_731d8d138e8f58b641991d45a76af834",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
@@ -86,7 +61,7 @@ const TESLA_INVENTORY = [
       "White Interior"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -110,7 +85,7 @@ const TESLA_INVENTORY = [
       "White Interior"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -227,7 +202,7 @@ const TESLA_INVENTORY = [
       "19\" Wheels"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
