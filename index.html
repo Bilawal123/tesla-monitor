@@ -559,8 +559,54 @@
       font-size: 0.95rem;
     }
 
+    /* Map filter toggle */
+    .map-toggle-container {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      z-index: 1000;
+      background: rgba(15, 22, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 4px;
+      display: flex;
+      gap: 4px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .toggle-btn {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-muted);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .toggle-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .toggle-btn.active {
+      background: var(--tesla-red);
+      color: white;
+      box-shadow: 0 0 10px rgba(232, 33, 39, 0.35);
+    }
+
     /* Mobile Responsive Layout */
     @media (max-width: 768px) {
+      .map-toggle-container {
+        top: 12px !important;
+        right: 12px !important;
+      }
       body {
         flex-direction: column-reverse; /* Places map on top, sidebar below */
       }
@@ -643,10 +689,10 @@
     <!-- Sidebar tabs -->
     <div class="tabs">
       <button class="tab-btn active" id="tab-avail" onclick="switchTab('available')">
-        Available <span class="tab-count" id="count-avail">0</span>
+        Available in CA <span class="tab-count" id="count-avail">0</span>
       </button>
       <button class="tab-btn" id="tab-unavail" onclick="switchTab('unavailable')">
-        Unavailable <span class="tab-count" id="count-unavail">0</span>
+        Available Elsewhere <span class="tab-count" id="count-unavail">0</span>
       </button>
     </div>
 
@@ -664,6 +710,12 @@
   <!-- Map section -->
   <div class="map-container">
     <div id="map"></div>
+    
+    <!-- Map filter toggle control -->
+    <div class="map-toggle-container">
+      <button id="toggle-ca-only" class="toggle-btn active" onclick="setMapFilter('ca')">CA Only</button>
+      <button id="toggle-all" class="toggle-btn" onclick="setMapFilter('all')">All Cars</button>
+    </div>
   </div>
 
   <!-- Leaflet JS -->
@@ -676,8 +728,9 @@
     // Constants & State
     const GILROY_COORDS = [37.0058, -121.5682];
     let map;
-    let markers = {};
+    let markerObjects = {}; // Stores { marker, isCA }
     let activeTab = 'available';
+    let mapFilter = 'ca'; // Default is 'ca' (or 'all')
 
     // Verify raw data loading
     if (typeof TESLA_INVENTORY === 'undefined') {
@@ -740,8 +793,14 @@
       // Reset selected card
       document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
       
-      // Zoom map to fit markers of this tab
-      fitMapBounds();
+      // Auto-switch map filter based on tab for better layout defaults
+      if (tab === 'available' && mapFilter === 'all') {
+        setMapFilter('ca');
+      } else if (tab === 'unavailable' && mapFilter === 'ca') {
+        setMapFilter('all');
+      } else {
+        fitMapBounds();
+      }
     }
 
     // Helper: Build matching labels
@@ -782,11 +841,18 @@
       availContainer.innerHTML = '';
       unavailContainer.innerHTML = '';
 
+      // Clear existing markers from map
+      Object.values(markerObjects).forEach(item => {
+        map.removeLayer(item.marker);
+      });
+      markerObjects = {};
+
       const availableList = [];
       const unavailableList = [];
 
       TESLA_INVENTORY.forEach(v => {
-        if (v.location !== 'Unavailable' && v.location !== 'Scrape Error') {
+        const isCA = v.location !== 'Unavailable' && v.location !== 'Scrape Error' && (v.location.includes(', CA') || v.location.includes(' CA '));
+        if (isCA) {
           availableList.push(v);
         } else {
           unavailableList.push(v);
@@ -797,14 +863,14 @@
       document.getElementById('count-avail').innerText = availableList.length;
       document.getElementById('count-unavail').innerText = unavailableList.length;
 
-      // Available Render
+      // Available in CA Render
       if (availableList.length === 0) {
         availContainer.innerHTML = `
           <div class="empty-state">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
               <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
             </svg>
-            <p>No available 7-seater vehicles found in this ZIP range.</p>
+            <p>No available 7-seater vehicles found in California.</p>
           </div>
         `;
       } else {
@@ -814,16 +880,20 @@
         });
       }
 
-      // Unavailable Render
+      // Available Elsewhere Render
       if (unavailableList.length === 0) {
         unavailContainer.innerHTML = `
           <div class="empty-state">
-            <p>No unavailable vehicles found in query.</p>
+            <p>No out-of-state vehicles found.</p>
           </div>
         `;
       } else {
         unavailableList.forEach(v => {
-          unavailContainer.appendChild(createVehicleCard(v, false));
+          const isOOS = v.location !== 'Unavailable' && v.location !== 'Scrape Error';
+          unavailContainer.appendChild(createVehicleCard(v, isOOS));
+          if (isOOS) {
+            addMapMarker(v);
+          }
         });
       }
     }
@@ -843,7 +913,6 @@
       });
 
       const marker = L.marker(v.coordinates, { icon: pinIcon })
-        .addTo(map)
         .bindPopup(`
           <div class="popup-title">🚗 Model Y ${v.trim}</div>
           <div class="popup-price">$${v.price.toLocaleString()}</div>
@@ -859,55 +928,62 @@
         highlightVehicleCard(v.vin);
       });
 
-      markers[v.vin] = marker;
+      const isCA = v.location.includes(', CA') || v.location.includes(' CA ');
+      markerObjects[v.vin] = {
+        marker: marker,
+        isCA: isCA
+      };
+
+      if (mapFilter === 'all' || (mapFilter === 'ca' && isCA)) {
+        marker.addTo(map);
+      }
     }
 
     // Highlight sidebar card when map marker is clicked
     function highlightVehicleCard(vin) {
-      // Find card element
       const card = document.getElementById(`card-${vin}`);
       if (!card) return;
 
-      // Select card
       document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
       card.classList.add('selected');
-
-      // Scroll sidebar list to this card
       card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
     // Center map & open popup when card is clicked
     function focusOnVehicle(vin, lat, lng) {
-      // Highlight card
       document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
       const card = document.getElementById(`card-${vin}`);
       if (card) card.classList.add('selected');
 
-      // Fly map to coordinates if available
-      if (lat && lng && markers[vin]) {
+      const item = markerObjects[vin];
+      
+      // Auto-enable "All Cars" map filter if clicking an out-of-state card in "CA Only" view
+      if (item && !item.isCA && mapFilter === 'ca') {
+        console.log("Auto-switching map filter to 'All Cars' to show out-of-state vehicle pin.");
+        setMapFilter('all');
+      }
+
+      if (lat && lng && item && item.marker) {
         map.flyTo([lat, lng], 10, {
           duration: 1.5
         });
         
-        // Open popup
         setTimeout(() => {
-          markers[vin].openPopup();
+          item.marker.openPopup();
         }, 1200);
       }
     }
 
-    // Automatically zoom map to fit all loaded markers
+    // Automatically zoom map to fit all active markers
     function fitMapBounds() {
       const activeMarkers = [];
-      
-      // Include home point
       activeMarkers.push(L.latLng(GILROY_COORDS));
 
-      if (activeTab === 'available') {
-        Object.entries(markers).forEach(([vin, marker]) => {
-          activeMarkers.push(marker.getLatLng());
-        });
-      }
+      Object.entries(markerObjects).forEach(([vin, item]) => {
+        if (map.hasLayer(item.marker)) {
+          activeMarkers.push(item.marker.getLatLng());
+        }
+      });
 
       if (activeMarkers.length > 1) {
         const bounds = L.latLngBounds(activeMarkers);
@@ -915,6 +991,27 @@
       } else {
         map.setView(GILROY_COORDS, 7);
       }
+    }
+
+    // Filter map markers between CA only or All States
+    function setMapFilter(filter) {
+      mapFilter = filter;
+      document.getElementById('toggle-ca-only').classList.toggle('active', filter === 'ca');
+      document.getElementById('toggle-all').classList.toggle('active', filter === 'all');
+      
+      Object.entries(markerObjects).forEach(([vin, item]) => {
+        if (mapFilter === 'all' || (mapFilter === 'ca' && item.isCA)) {
+          if (!map.hasLayer(item.marker)) {
+            item.marker.addTo(map);
+          }
+        } else {
+          if (map.hasLayer(item.marker)) {
+            map.removeLayer(item.marker);
+          }
+        }
+      });
+      
+      fitMapBounds();
     }
 
     // Helper: Create vehicle list element

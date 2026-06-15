@@ -12,15 +12,15 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "19\" Wheels"
     ],
-    "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "location": "St. Petersburg (4601 34TH ST N, Saint Petersburg, FL 33714-3024)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "41 hrs (2,800 mi)",
+    "flightTime": "5.0 hrs (SJC to TPA)",
     "coordinates": [
-      null,
-      null
+      27.8131,
+      -82.6791
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PRMY1,$WY19P,$I1BP&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_57c3b8f722e2e163d654d522752f587e?titleStatus=new&redirect=no#overview"
   },
   {
@@ -44,7 +44,7 @@ const TESLA_INVENTORY = [
       34.0725,
       -117.8925
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PPSW,$WY19P,$IPW12&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_ed6844bbc04db00b4190b21457e77fd2?titleStatus=new&redirect=no#overview"
   },
   {
@@ -60,15 +60,15 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "location": "Dallas (13725 Coit Rd, Dallas, TX 75240)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "24 hrs (1,650 mi)",
+    "flightTime": "3.5 hrs (SJC to DFW)",
     "coordinates": [
-      null,
-      null
+      32.7767,
+      -96.797
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PRMY1,$WY20P,$IPW12&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_0eda2b26d717f8bbb81f4855e3af2064?titleStatus=new&redirect=no#overview"
   },
   {
@@ -84,15 +84,15 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "location": "Seattle (23201 Hwy 99, Edmonds, WA 98026)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "13.5 hrs (850 mi)",
+    "flightTime": "2.0 hrs (SJC to SEA)",
     "coordinates": [
-      null,
-      null
+      47.6062,
+      -122.3321
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PRMY1,$WY20P,$IPW12&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_b3270c16c15db2e3a50e501a378ad2dc?titleStatus=new&redirect=no#overview"
   },
   {
@@ -107,15 +107,15 @@ const TESLA_INVENTORY = [
     "matches": [
       "19\" Wheels"
     ],
-    "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "location": "Las Vegas (9500 W Sahara Ave, Las Vegas, NV 89117)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "8.5 hrs (525 mi)",
+    "flightTime": "1.2 hrs (SJC to LAS)",
     "coordinates": [
-      null,
-      null
+      36.1716,
+      -115.1391
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PMSG,$WY19P,$I1BP&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_450466d1601e88c130a99092e9136704?titleStatus=new&redirect=no#overview"
   },
   {
@@ -138,7 +138,7 @@ const TESLA_INVENTORY = [
       null,
       null
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PRMY1,$WY20P,$I1BP&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_6afe1611d5edc984ab0ca9b438b5dbf5?titleStatus=new&redirect=no#overview"
   },
   {
@@ -161,7 +161,7 @@ const TESLA_INVENTORY = [
       null,
       null
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PTSG,$WY20P,$IPW12&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_a5717c128e12505d44fbac00b2b2e590?titleStatus=new&redirect=no#overview"
   },
   {
@@ -184,7 +184,7 @@ const TESLA_INVENTORY = [
       33.8114,
       -118.1706
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PBSB,$WY20P,$IPW12&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_db4e4aa113fd927f1c8d1a631a8707cf?titleStatus=new&redirect=no#overview"
   },
   {
@@ -205,7 +205,7 @@ const TESLA_INVENTORY = [
       null,
       null
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PPSW,$WY20P,$I1BP&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4228e175f8ab2f357dedf831aa25e9f?titleStatus=new&redirect=no#overview"
   },
   {
@@ -226,7 +226,7 @@ const TESLA_INVENTORY = [
       null,
       null
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PBSB,$WY20P,$I1BP&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_d17bf4fe8b009d675cee6a26e035180d?titleStatus=new&redirect=no#overview"
   },
   {
@@ -247,7 +247,7 @@ const TESLA_INVENTORY = [
       32.8805,
       -117.1593
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PTSG,$WY20P,$I1BP&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_d0f905fef95f65b9d0d899a4f1df2a2b?titleStatus=new&redirect=no#overview"
   },
   {
@@ -268,7 +268,7 @@ const TESLA_INVENTORY = [
       37.6748,
       -122.4632
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$STY7S,$PTSG,$WY20P,$I1BP&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_0d237442e833397ca8160052fea78d8a?titleStatus=new&redirect=no#overview"
   }
 ];
