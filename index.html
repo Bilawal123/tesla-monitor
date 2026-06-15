@@ -554,6 +554,66 @@
     .empty-state p {
       font-size: 0.95rem;
     }
+
+    /* Mobile Responsive Layout */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column-reverse; /* Places map on top, sidebar below */
+      }
+
+      .sidebar {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: 55vh !important;
+        border-right: none !important;
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      .map-container {
+        width: 100% !important;
+        height: 45vh !important;
+        flex: none !important;
+      }
+
+      /* Compact layouts for mobile header and cards */
+      .sidebar-header {
+        padding: 16px !important;
+      }
+
+      .sidebar-header h1 {
+        font-size: 1.15rem !important;
+        margin-bottom: 4px !important;
+      }
+
+      .search-center {
+        margin-top: 8px !important;
+        padding: 6px 10px !important;
+        font-size: 0.8rem !important;
+      }
+
+      .tab-btn {
+        padding: 12px 8px !important;
+        font-size: 0.85rem !important;
+      }
+
+      .list-wrapper {
+        padding: 12px !important;
+        gap: 10px !important;
+      }
+
+      .vehicle-card {
+        padding: 12px !important;
+      }
+      
+      .card-price {
+        font-size: 1.1rem !important;
+      }
+      
+      .card-title {
+        font-size: 0.95rem !important;
+      }
+    }
   </style>
 </head>
 <body>
