@@ -84,7 +84,7 @@ const TESLA_INVENTORY = [
       "19\" Wheels"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -107,7 +107,7 @@ const TESLA_INVENTORY = [
       "19\" Wheels"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
