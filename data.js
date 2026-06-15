@@ -1,5 +1,29 @@
 const TESLA_INVENTORY = [
   {
+    "vin": "7SAY272_731d8d138e8f58b641991d45a76af834",
+    "trim": "Premium All-Wheel Drive",
+    "seats": 7,
+    "price": 52310,
+    "paint": "Pearl White",
+    "wheels": "19’’ Crossflow Wheels",
+    "interior": "Black and White Premium Interior",
+    "similarityScore": 2,
+    "matches": [
+      "19\" Wheels",
+      "White Interior"
+    ],
+    "location": "Rocklin (4361 Granite Drive, Rocklin, CA 95677-2131)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "2.5 hrs (155 mi)",
+    "flightTime": "N/A (Drive)",
+    "coordinates": [
+      38.7997,
+      -121.2335
+    ],
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY272_731d8d138e8f58b641991d45a76af834?titleStatus=new&redirect=no#overview"
+  },
+  {
     "vin": "7SAY238_0eda2b26d717f8bbb81f4855e3af2064",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
@@ -12,13 +36,13 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
-    "status": "In Transit - Arriving Soon",
-    "driveTime": "42 hrs (2,900 mi)",
-    "flightTime": "5.5 hrs (SJC to JFK)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
     "coordinates": [
-      40.6782,
-      -73.9442
+      null,
+      null
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_0eda2b26d717f8bbb81f4855e3af2064?titleStatus=new&redirect=no#overview"
@@ -36,16 +60,62 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
-    "status": "In Transit - Arriving Soon",
-    "driveTime": "42 hrs (2,900 mi)",
-    "flightTime": "5.5 hrs (SJC to JFK)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
     "coordinates": [
-      40.6782,
-      -73.9442
+      null,
+      null
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_b3270c16c15db2e3a50e501a378ad2dc?titleStatus=new&redirect=no#overview"
+  },
+  {
+    "vin": "7SAY238_450466d1601e88c130a99092e9136704",
+    "trim": "Premium All-Wheel Drive",
+    "seats": 7,
+    "price": 52490,
+    "paint": "Stealth Grey",
+    "wheels": "19’’ Crossflow Wheels",
+    "interior": "All Black Premium Interior",
+    "similarityScore": 1,
+    "matches": [
+      "19\" Wheels"
+    ],
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
+    "coordinates": [
+      null,
+      null
+    ],
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY238_450466d1601e88c130a99092e9136704?titleStatus=new&redirect=no#overview"
+  },
+  {
+    "vin": "7SAY250_e59f810da20b39333d1874a651aa96f7",
+    "trim": "Premium All-Wheel Drive",
+    "seats": 7,
+    "price": 54490,
+    "paint": "Pearl White",
+    "wheels": "19’’ Crossflow Wheels",
+    "interior": "All Black Premium Interior",
+    "similarityScore": 1,
+    "matches": [
+      "19\" Wheels"
+    ],
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
+    "coordinates": [
+      null,
+      null
+    ],
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY250_e59f810da20b39333d1874a651aa96f7?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY238_c4179b0a2bc1903aa0da3eabe4c5856e",
@@ -60,7 +130,7 @@ const TESLA_INVENTORY = [
       "White Interior"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -83,7 +153,7 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -106,7 +176,7 @@ const TESLA_INVENTORY = [
       "White Interior"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -150,7 +220,7 @@ const TESLA_INVENTORY = [
     "similarityScore": 0,
     "matches": [],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -159,47 +229,5 @@ const TESLA_INVENTORY = [
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4228e175f8ab2f357dedf831aa25e9f?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY238_d0f905fef95f65b9d0d899a4f1df2a2b",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 56490,
-    "paint": "Quicksilver",
-    "wheels": "20’’ Helix 2.0 Wheels",
-    "interior": "All Black Premium Interior",
-    "similarityScore": 0,
-    "matches": [],
-    "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY238_d0f905fef95f65b9d0d899a4f1df2a2b?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY250_0d237442e833397ca8160052fea78d8a",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 57490,
-    "paint": "Quicksilver",
-    "wheels": "20’’ Helix 2.0 Wheels",
-    "interior": "All Black Premium Interior",
-    "similarityScore": 0,
-    "matches": [],
-    "location": "Colma (1500 Collins Ave, Colma, CA 94014)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "1.2 hrs (75 mi)",
-    "flightTime": "N/A (Drive)",
-    "coordinates": [
-      37.6748,
-      -122.4632
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY250_0d237442e833397ca8160052fea78d8a?titleStatus=new&redirect=no#overview"
   }
 ];
