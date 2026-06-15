@@ -685,6 +685,31 @@
       return `score-${score}`;
     }
 
+    // Helper: Render custom interior badges with color circles
+    function getInteriorBadge(interiorText) {
+      const text = (interiorText || '').toLowerCase();
+      const isWhite = text.includes('white') || text.includes('black and white');
+      const isBlack = text.includes('black') && !text.includes('white');
+      
+      if (isWhite) {
+        return `
+          <div style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #111827 50%, #f9fafb 50%); border: 1px solid rgba(255,255,255,0.25); flex-shrink: 0;"></span>
+            <span>Black & White</span>
+          </div>
+        `;
+      }
+      if (isBlack) {
+        return `
+          <div style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #111827; border: 1px solid rgba(255,255,255,0.25); flex-shrink: 0;"></span>
+            <span>Black</span>
+          </div>
+        `;
+      }
+      return interiorText;
+    }
+
     // Render vehicle lists in sidebar
     function renderInventory() {
       const availContainer = document.getElementById('list-available');
@@ -866,7 +891,7 @@
           </div>
           <div class="spec-item">
             <div class="spec-label">Interior</div>
-            <div class="spec-val ${hasInteriorMatch ? 'match' : ''}" title="${v.interior}">${v.interior.split(' ')[0]}</div>
+            <div class="spec-val ${hasInteriorMatch ? 'match' : ''}" title="${v.interior}">${getInteriorBadge(v.interior)}</div>
           </div>
         </div>
 
