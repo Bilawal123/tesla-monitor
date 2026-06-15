@@ -731,6 +731,8 @@
     let markerObjects = {}; // Stores { marker, isCA }
     let activeTab = 'available';
     let mapFilter = 'ca'; // Default is 'ca' (or 'all')
+    // Tracks how many markers have been placed at each lat/lng key → used to spiral overlapping pins
+    let coordSlotCount = {};
 
     // Verify raw data loading
     if (typeof TESLA_INVENTORY === 'undefined') {
@@ -846,6 +848,7 @@
         map.removeLayer(item.marker);
       });
       markerObjects = {};
+      coordSlotCount = {}; // Reset collision tracker when re-rendering
 
       const availableList = [];
       const unavailableList = [];
@@ -904,7 +907,26 @@
 
       const isExact = v.similarityScore === 3;
       const markerClass = isExact ? 'exact' : '';
-      
+
+      // --- Spiral offset for colliding coordinates ---
+      // When multiple vehicles share an identical lat/lng, place each subsequent
+      // pin at an increasing angle around a small circle (~250m radius) so every
+      // marker is individually visible and clickable.
+      const OFFSET_RADIUS = 0.0025; // ~250m in degrees
+      const coordKey = `${v.coordinates[0].toFixed(4)},${v.coordinates[1].toFixed(4)}`;
+      const slotIndex = coordSlotCount[coordKey] || 0;
+      coordSlotCount[coordKey] = slotIndex + 1;
+
+      let [lat, lng] = v.coordinates;
+      if (slotIndex > 0) {
+        // Distribute pins around a circle starting at 60° and stepping 60° per slot
+        const angleDeg = 60 * slotIndex;
+        const angleRad = (angleDeg * Math.PI) / 180;
+        lat = lat + OFFSET_RADIUS * Math.cos(angleRad);
+        lng = lng + OFFSET_RADIUS * Math.sin(angleRad) / Math.cos((v.coordinates[0] * Math.PI) / 180);
+      }
+      const displayCoords = [lat, lng];
+
       const pinIcon = L.divIcon({
         className: 'custom-marker',
         html: `<div class="marker-pin ${markerClass}"></div>`,
@@ -912,7 +934,7 @@
         iconAnchor: [12, 12]
       });
 
-      const marker = L.marker(v.coordinates, { icon: pinIcon })
+      const marker = L.marker(displayCoords, { icon: pinIcon })
         .bindPopup(`
           <div class="popup-title">🚗 Model Y ${v.trim}</div>
           <div class="popup-price">$${v.price.toLocaleString()}</div>
@@ -931,7 +953,8 @@
       const isCA = v.location.includes(', CA') || v.location.includes(' CA ');
       markerObjects[v.vin] = {
         marker: marker,
-        isCA: isCA
+        isCA: isCA,
+        displayCoords: displayCoords  // store offset position for focusOnVehicle
       };
 
       if (mapFilter === 'all' || (mapFilter === 'ca' && isCA)) {
@@ -963,8 +986,10 @@
         setMapFilter('all');
       }
 
-      if (lat && lng && item && item.marker) {
-        map.flyTo([lat, lng], 10, {
+      // Fly to the marker's actual displayed position (may be offset from raw coords)
+      const flyTarget = item && item.displayCoords ? item.displayCoords : (lat && lng ? [lat, lng] : null);
+      if (flyTarget && item && item.marker) {
+        map.flyTo(flyTarget, 10, {
           duration: 1.5
         });
         
