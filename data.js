@@ -12,13 +12,13 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "19\" Wheels"
     ],
-    "location": "St. Petersburg (4601 34TH ST N, Saint Petersburg, FL 33714-3024)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "41 hrs (2,800 mi)",
-    "flightTime": "5.0 hrs (SJC to TPA)",
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
     "coordinates": [
-      27.8131,
-      -82.6791
+      null,
+      null
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_57c3b8f722e2e163d654d522752f587e?titleStatus=new&redirect=no#overview"
@@ -36,8 +36,8 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Scrape Error",
-    "status": "Failed to load details: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.delivery-selection--container')\u001b[22m\n",
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -60,8 +60,8 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Scrape Error",
-    "status": "Failed to load details: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.delivery-selection--container')\u001b[22m\n",
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -106,8 +106,8 @@ const TESLA_INVENTORY = [
     "matches": [
       "Ultra Red Paint"
     ],
-    "location": "Scrape Error",
-    "status": "Failed to load details: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.delivery-selection--container')\u001b[22m\n",
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -129,8 +129,8 @@ const TESLA_INVENTORY = [
     "matches": [
       "White Interior"
     ],
-    "location": "Scrape Error",
-    "status": "Failed to load details: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.delivery-selection--container')\u001b[22m\n",
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -152,13 +152,13 @@ const TESLA_INVENTORY = [
     "matches": [
       "White Interior"
     ],
-    "location": "Scrape Error",
-    "status": "Failed to load details: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.delivery-selection--container')\u001b[22m\n",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "location": "Long Beach (1800 E SPRING ST, LONG BEACH, CA 90755-1934)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "5.5 hrs (335 mi)",
+    "flightTime": "1.0 hr (SJC to LGB)",
     "coordinates": [
-      null,
-      null
+      33.8114,
+      -118.1706
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_db4e4aa113fd927f1c8d1a631a8707cf?titleStatus=new&redirect=no#overview"
@@ -194,8 +194,8 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Scrape Error",
-    "status": "Failed to load details: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.delivery-selection--container')\u001b[22m\n",
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -215,13 +215,13 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Scrape Error",
-    "status": "Failed to load details: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.delivery-selection--container')\u001b[22m\n",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "location": "San Diego - Miramar (9250 Trade Pl, San Diego, CA 92121)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "6.8 hrs (420 mi)",
+    "flightTime": "1.2 hrs (SJC to SAN)",
     "coordinates": [
-      null,
-      null
+      32.8805,
+      -117.1593
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_d0f905fef95f65b9d0d899a4f1df2a2b?titleStatus=new&redirect=no#overview"
@@ -236,13 +236,13 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Scrape Error",
-    "status": "Failed to load details: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.delivery-selection--container')\u001b[22m\n",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "location": "Colma (1500 Collins Ave, Colma, CA 94014)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "1.2 hrs (75 mi)",
+    "flightTime": "N/A (Drive)",
     "coordinates": [
-      null,
-      null
+      37.6748,
+      -122.4632
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_0d237442e833397ca8160052fea78d8a?titleStatus=new&redirect=no#overview"
