@@ -38,11 +38,11 @@ const TESLA_INVENTORY = [
     ],
     "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
     "status": "In Transit - Arriving Soon",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "42 hrs (2,900 mi)",
+    "flightTime": "5.5 hrs (SJC to JFK)",
     "coordinates": [
-      null,
-      null
+      40.6782,
+      -73.9442
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_0eda2b26d717f8bbb81f4855e3af2064?titleStatus=new&redirect=no#overview"
@@ -62,11 +62,11 @@ const TESLA_INVENTORY = [
     ],
     "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
     "status": "In Transit - Arriving Soon",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "42 hrs (2,900 mi)",
+    "flightTime": "5.5 hrs (SJC to JFK)",
     "coordinates": [
-      null,
-      null
+      40.6782,
+      -73.9442
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_b3270c16c15db2e3a50e501a378ad2dc?titleStatus=new&redirect=no#overview"
@@ -108,11 +108,11 @@ const TESLA_INVENTORY = [
     ],
     "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
     "status": "In Transit - Arriving Soon",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "42 hrs (2,900 mi)",
+    "flightTime": "5.5 hrs (SJC to JFK)",
     "coordinates": [
-      null,
-      null
+      40.6782,
+      -73.9442
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_6afe1611d5edc984ab0ca9b438b5dbf5?titleStatus=new&redirect=no#overview"
