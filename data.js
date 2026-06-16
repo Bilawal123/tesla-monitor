@@ -63,11 +63,11 @@ const TESLA_INVENTORY = [
     ],
     "location": "Houston (19820 Hempstead Hwy, Houston, TX 77065-5338)",
     "status": "Available for faster pick up",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "32 hrs (1,845 mi)",
+    "flightTime": "3.5 hrs (SJC to DFW)",
     "coordinates": [
-      null,
-      null
+      29.9126543,
+      -95.6154015
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PN00,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_e3d35d297db03a0b4cb7c5cbdea419a2?titleStatus=new&redirect=no#overview"
@@ -87,11 +87,11 @@ const TESLA_INVENTORY = [
     ],
     "location": "Tesla Doral (9950 NW 25TH ST, DORAL, FL 33172)",
     "status": "Available for Immediate Pick Up",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "53 hrs (2,972 mi)",
+    "flightTime": "5.5 hrs (SJC to TPA)",
     "coordinates": [
-      null,
-      null
+      25.795897,
+      -80.35769
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_0eda2b26d717f8bbb81f4855e3af2064?titleStatus=new&redirect=no#overview"
@@ -111,11 +111,11 @@ const TESLA_INVENTORY = [
     ],
     "location": "Springfield, NJ (135 US 22, Springfield, NJ 07081-3105)",
     "status": "In Transit - Arriving Soon",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "52 hrs (2,956 mi)",
+    "flightTime": "5.5 hrs (SJC to EWR)",
     "coordinates": [
-      null,
-      null
+      40.6858088,
+      -74.3165272
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_b3270c16c15db2e3a50e501a378ad2dc?titleStatus=new&redirect=no#overview"
@@ -224,11 +224,11 @@ const TESLA_INVENTORY = [
     "matches": [],
     "location": "Springfield, NJ (135 US 22, Springfield, NJ 07081-3105)",
     "status": "In Transit - Arriving Soon",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "52 hrs (2,956 mi)",
+    "flightTime": "5.5 hrs (SJC to EWR)",
     "coordinates": [
-      null,
-      null
+      40.6858088,
+      -74.3165272
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4228e175f8ab2f357dedf831aa25e9f?titleStatus=new&redirect=no#overview"
@@ -245,11 +245,11 @@ const TESLA_INVENTORY = [
     "matches": [],
     "location": "Liberty Lake (1805 N PEPPER LN, Liberty Lake, WA 99019-9511)",
     "status": "Available for Immediate Pick Up",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "18 hrs (949 mi)",
+    "flightTime": "2.0 hrs (SJC to SEA)",
     "coordinates": [
-      null,
-      null
+      47.6739395,
+      -117.1133118
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_d17bf4fe8b009d675cee6a26e035180d?titleStatus=new&redirect=no#overview"
@@ -266,11 +266,11 @@ const TESLA_INVENTORY = [
     "matches": [],
     "location": "Mount Kisco (115 Kisco Avenue, Mount Kisco, NY 10549)",
     "status": "In Transit - Arriving Soon",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "53 hrs (3,002 mi)",
+    "flightTime": "5.5 hrs (SJC to JFK)",
     "coordinates": [
-      null,
-      null
+      41.2140074,
+      -73.7264559
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_ee4eca3778e0fe5a3d4230f85dcd573e?titleStatus=new&redirect=no#overview"
