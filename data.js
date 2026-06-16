@@ -61,7 +61,7 @@ const TESLA_INVENTORY = [
       "White Interior"
     ],
     "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
+    "status": "Unavailable in CA (cached)",
     "driveTime": "N/A",
     "flightTime": "N/A",
     "coordinates": [
@@ -191,27 +191,27 @@ const TESLA_INVENTORY = [
     "url": "https://www.tesla.com/my/order/7SAY238_450466d1601e88c130a99092e9136704?titleStatus=new&redirect=no#overview"
   },
   {
-    "vin": "7SAY238_d18d43bbf5af07e4fa6c4e394a6ec6cc",
+    "vin": "7SAY238_b85c0492358e58ce5b71ebbe485efc09",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
-    "price": 53490,
-    "paint": "Pearl White",
+    "price": 54490,
+    "paint": "Quicksilver",
     "wheels": "19’’ Crossflow Wheels",
     "interior": "All Black Premium Interior",
     "similarityScore": 1,
     "matches": [
       "19\" Wheels"
     ],
-    "location": "San Diego - Miramar (9250 Trade Pl, San Diego, CA 92121)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "6.8 hrs (420 mi)",
-    "flightTime": "1.2 hrs (SJC to SAN)",
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
     "coordinates": [
-      32.8805,
-      -117.1593
+      null,
+      null
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY238_d18d43bbf5af07e4fa6c4e394a6ec6cc?titleStatus=new&redirect=no#overview"
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY238_b85c0492358e58ce5b71ebbe485efc09?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY250_e59f810da20b39333d1874a651aa96f7",
@@ -258,29 +258,6 @@ const TESLA_INVENTORY = [
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PN01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4179b0a2bc1903aa0da3eabe4c5856e?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY250_5f96f2a82b7a052e7a5409d5e5c48262",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 55490,
-    "paint": "Quicksilver",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "All Black Premium Interior",
-    "similarityScore": 1,
-    "matches": [
-      "19\" Wheels"
-    ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY250_5f96f2a82b7a052e7a5409d5e5c48262?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY238_6afe1611d5edc984ab0ca9b438b5dbf5",
