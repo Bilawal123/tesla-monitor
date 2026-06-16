@@ -1,29 +1,5 @@
 const TESLA_INVENTORY = [
   {
-    "vin": "7SAY272_731d8d138e8f58b641991d45a76af834",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 52310,
-    "paint": "Pearl White",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 2,
-    "matches": [
-      "19\" Wheels",
-      "White Interior"
-    ],
-    "location": "Rocklin (4361 Granite Drive, Rocklin, CA 95677-2131)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "2.5 hrs (155 mi)",
-    "flightTime": "N/A (Drive)",
-    "coordinates": [
-      38.7997,
-      -121.2335
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY272_731d8d138e8f58b641991d45a76af834?titleStatus=new&redirect=no#overview"
-  },
-  {
     "vin": "7SAY238_57c3b8f722e2e163d654d522752f587e",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
@@ -94,6 +70,30 @@ const TESLA_INVENTORY = [
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_0a1235633c07f7ea1d849c95609fe8ef?titleStatus=new&redirect=no#overview"
+  },
+  {
+    "vin": "7SAY250_849b7859a551e28dc61d00a235f03b46",
+    "trim": "Premium All-Wheel Drive",
+    "seats": 7,
+    "price": 55490,
+    "paint": "Ultra Red",
+    "wheels": "19’’ Crossflow Wheels",
+    "interior": "All Black Premium Interior",
+    "similarityScore": 2,
+    "matches": [
+      "Ultra Red Paint",
+      "19\" Wheels"
+    ],
+    "location": "Tesla Los Gatos (15500 Los Gatos Blvd, Los Gatos, CA 95032)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
+    "coordinates": [
+      null,
+      null
+    ],
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY250_849b7859a551e28dc61d00a235f03b46?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY238_0eda2b26d717f8bbb81f4855e3af2064",
@@ -167,6 +167,52 @@ const TESLA_INVENTORY = [
     "url": "https://www.tesla.com/my/order/7SAY238_450466d1601e88c130a99092e9136704?titleStatus=new&redirect=no#overview"
   },
   {
+    "vin": "7SAY238_d18d43bbf5af07e4fa6c4e394a6ec6cc",
+    "trim": "Premium All-Wheel Drive",
+    "seats": 7,
+    "price": 53490,
+    "paint": "Pearl White",
+    "wheels": "19’’ Crossflow Wheels",
+    "interior": "All Black Premium Interior",
+    "similarityScore": 1,
+    "matches": [
+      "19\" Wheels"
+    ],
+    "location": "San Diego - Miramar (9250 Trade Pl, San Diego, CA 92121)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "6.8 hrs (420 mi)",
+    "flightTime": "1.2 hrs (SJC to SAN)",
+    "coordinates": [
+      32.8805,
+      -117.1593
+    ],
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY238_d18d43bbf5af07e4fa6c4e394a6ec6cc?titleStatus=new&redirect=no#overview"
+  },
+  {
+    "vin": "7SAY250_e59f810da20b39333d1874a651aa96f7",
+    "trim": "Premium All-Wheel Drive",
+    "seats": 7,
+    "price": 54490,
+    "paint": "Pearl White",
+    "wheels": "19’’ Crossflow Wheels",
+    "interior": "All Black Premium Interior",
+    "similarityScore": 1,
+    "matches": [
+      "19\" Wheels"
+    ],
+    "location": "Corte Madera (201 Casa Buena Dr, Corte Madera, CA 94925)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
+    "coordinates": [
+      null,
+      null
+    ],
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY250_e59f810da20b39333d1874a651aa96f7?titleStatus=new&redirect=no#overview"
+  },
+  {
     "vin": "7SAY238_c4179b0a2bc1903aa0da3eabe4c5856e",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
@@ -211,29 +257,6 @@ const TESLA_INVENTORY = [
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_5f96f2a82b7a052e7a5409d5e5c48262?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY238_158b1741f0ff8481cad4ab7e2415db42",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 56490,
-    "paint": "Pearl White",
-    "wheels": "20’’ Helix 2.0 Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 1,
-    "matches": [
-      "White Interior"
-    ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY238_158b1741f0ff8481cad4ab7e2415db42?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY238_6afe1611d5edc984ab0ca9b438b5dbf5",
@@ -347,6 +370,27 @@ const TESLA_INVENTORY = [
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4228e175f8ab2f357dedf831aa25e9f?titleStatus=new&redirect=no#overview"
+  },
+  {
+    "vin": "7SAY238_d17bf4fe8b009d675cee6a26e035180d",
+    "trim": "Premium All-Wheel Drive",
+    "seats": 7,
+    "price": 55990,
+    "paint": "Diamond Black",
+    "wheels": "20’’ Helix 2.0 Wheels",
+    "interior": "All Black Premium Interior",
+    "similarityScore": 0,
+    "matches": [],
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
+    "coordinates": [
+      null,
+      null
+    ],
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY238_d17bf4fe8b009d675cee6a26e035180d?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY250_ee4eca3778e0fe5a3d4230f85dcd573e",
