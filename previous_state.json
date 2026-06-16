@@ -15,11 +15,11 @@
     ],
     "location": "Dallas (6500 Cedar Springs Road, Dallas, TX 75235)",
     "status": "Available for faster pick up",
-    "driveTime": "24 hrs (1,650 mi)",
+    "driveTime": "29 hrs (1,657 mi)",
     "flightTime": "3.5 hrs (SJC to DFW)",
     "coordinates": [
-      32.7767,
-      -96.797
+      32.8324173,
+      -96.8376053
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_70fd4bfedc5e4fd81066bb0aeb2a1fcc?titleStatus=new&redirect=no#overview"
