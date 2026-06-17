@@ -194,13 +194,13 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Liberty Lake (1805 N PEPPER LN, Liberty Lake, WA 99019-9511)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "18 hrs (949 mi)",
+    "flightTime": "2.0 hrs (SJC to SEA)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      47.6739395,
+      -117.1133118
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_d17bf4fe8b009d675cee6a26e035180d?titleStatus=new&redirect=no#overview"
