@@ -1,5 +1,30 @@
 const TESLA_INVENTORY = [
   {
+    "vin": "7SAY238_70fd4bfedc5e4fd81066bb0aeb2a1fcc",
+    "trim": "Premium All-Wheel Drive",
+    "seats": 7,
+    "price": 55490,
+    "paint": "Ultra Red",
+    "wheels": "19’’ Crossflow Wheels",
+    "interior": "Black and White Premium Interior",
+    "similarityScore": 3,
+    "matches": [
+      "Ultra Red Paint",
+      "19\" Wheels",
+      "White Interior"
+    ],
+    "location": "Unavailable",
+    "status": "This vehicle is not available for your registration ZIP Code.",
+    "driveTime": "N/A",
+    "flightTime": "N/A",
+    "coordinates": [
+      null,
+      null
+    ],
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY238_70fd4bfedc5e4fd81066bb0aeb2a1fcc?titleStatus=new&redirect=no#overview"
+  },
+  {
     "vin": "7SAY238_57c3b8f722e2e163d654d522752f587e",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
@@ -24,30 +49,6 @@ const TESLA_INVENTORY = [
     "url": "https://www.tesla.com/my/order/7SAY238_57c3b8f722e2e163d654d522752f587e?titleStatus=new&redirect=no#overview"
   },
   {
-    "vin": "7SAY238_fdc7abc39bfa7fb971bc32b9d1fd6e83",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 54990,
-    "paint": "Diamond Black",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 2,
-    "matches": [
-      "19\" Wheels",
-      "White Interior"
-    ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PX02,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY238_fdc7abc39bfa7fb971bc32b9d1fd6e83?titleStatus=new&redirect=no#overview"
-  },
-  {
     "vin": "7SAY238_e3d35d297db03a0b4cb7c5cbdea419a2",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
@@ -70,54 +71,6 @@ const TESLA_INVENTORY = [
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PN00,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_e3d35d297db03a0b4cb7c5cbdea419a2?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY250_0a1235633c07f7ea1d849c95609fe8ef",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 55490,
-    "paint": "Pearl White",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 2,
-    "matches": [
-      "19\" Wheels",
-      "White Interior"
-    ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY250_0a1235633c07f7ea1d849c95609fe8ef?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY250_849b7859a551e28dc61d00a235f03b46",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 55490,
-    "paint": "Ultra Red",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "All Black Premium Interior",
-    "similarityScore": 2,
-    "matches": [
-      "Ultra Red Paint",
-      "19\" Wheels"
-    ],
-    "location": "Tesla Los Gatos (15500 Los Gatos Blvd, Los Gatos, CA 95032)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY250_849b7859a551e28dc61d00a235f03b46?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY238_0eda2b26d717f8bbb81f4855e3af2064",
@@ -191,52 +144,6 @@ const TESLA_INVENTORY = [
     "url": "https://www.tesla.com/my/order/7SAY238_450466d1601e88c130a99092e9136704?titleStatus=new&redirect=no#overview"
   },
   {
-    "vin": "7SAY238_b85c0492358e58ce5b71ebbe485efc09",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 54490,
-    "paint": "Quicksilver",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "All Black Premium Interior",
-    "similarityScore": 1,
-    "matches": [
-      "19\" Wheels"
-    ],
-    "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY238_b85c0492358e58ce5b71ebbe485efc09?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY250_e59f810da20b39333d1874a651aa96f7",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 54490,
-    "paint": "Pearl White",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "All Black Premium Interior",
-    "similarityScore": 1,
-    "matches": [
-      "19\" Wheels"
-    ],
-    "location": "Corte Madera (201 Casa Buena Dr, Corte Madera, CA 94925)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY19P,$STY7S,$CPF0,$TW01&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY250_e59f810da20b39333d1874a651aa96f7?titleStatus=new&redirect=no#overview"
-  },
-  {
     "vin": "7SAY238_c4179b0a2bc1903aa0da3eabe4c5856e",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
@@ -281,52 +188,6 @@ const TESLA_INVENTORY = [
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_6afe1611d5edc984ab0ca9b438b5dbf5?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY238_1544f0bc7ba8c65e0ca109c503617b94",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 56990,
-    "paint": "Diamond Black",
-    "wheels": "20’’ Helix 2.0 Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 1,
-    "matches": [
-      "White Interior"
-    ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
-    "coordinates": [
-      null,
-      null
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY238_1544f0bc7ba8c65e0ca109c503617b94?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY250_db4e4aa113fd927f1c8d1a631a8707cf",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 57990,
-    "paint": "Diamond Black",
-    "wheels": "20’’ Helix 2.0 Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 1,
-    "matches": [
-      "White Interior"
-    ],
-    "location": "Long Beach (1800 E SPRING ST, LONG BEACH, CA 90755-1934)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "5.5 hrs (335 mi)",
-    "flightTime": "1.0 hr (SJC to LGB)",
-    "coordinates": [
-      33.8114,
-      -118.1706
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY250_db4e4aa113fd927f1c8d1a631a8707cf?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY250_7607267deebb4fac957714c9a59209bb",
