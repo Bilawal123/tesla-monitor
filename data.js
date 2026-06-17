@@ -12,13 +12,13 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "19\" Wheels"
     ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Springfield, NJ (135 US 22, Springfield, NJ 07081-3105)",
+    "status": "In Transit - Arriving Soon",
+    "driveTime": "52 hrs (2,956 mi)",
+    "flightTime": "5.5 hrs (SJC to EWR)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      40.6858088,
+      -74.3165272
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_57c3b8f722e2e163d654d522752f587e?titleStatus=new&redirect=no#overview"
@@ -36,13 +36,13 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Devon (470 W. Lancaster Avenue, Devon, PA 19333)",
+    "status": "In Transit - Arriving Soon",
+    "driveTime": "51 hrs (2,922 mi)",
+    "flightTime": "5.5 hrs (SJC to PHL)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      40.0455578,
+      -75.4239593
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_0eda2b26d717f8bbb81f4855e3af2064?titleStatus=new&redirect=no#overview"
@@ -60,13 +60,13 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Tesla Mohegan Sun (1 Mohegan Sun Blvd, Uncasville, CT 06382)",
+    "status": "In Transit - Arriving Soon",
+    "driveTime": "55 hrs (3,094 mi)",
+    "flightTime": "5.5 hrs (SJC to BDL)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      41.4911078,
+      -72.0897434
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_b3270c16c15db2e3a50e501a378ad2dc?titleStatus=new&redirect=no#overview"
@@ -106,13 +106,13 @@ const TESLA_INVENTORY = [
     "matches": [
       "White Interior"
     ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Orlando (2214 John Young Pkwy, Orlando, FL 32804)",
+    "status": "Available for Immediate Pick Up",
+    "driveTime": "49 hrs (2,742 mi)",
+    "flightTime": "5.0 hrs (SJC to TPA)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      28.5730011,
+      -81.4163757
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PN01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4179b0a2bc1903aa0da3eabe4c5856e?titleStatus=new&redirect=no#overview"
@@ -129,13 +129,13 @@ const TESLA_INVENTORY = [
     "matches": [
       "Ultra Red Paint"
     ],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Springfield, NJ (135 US 22, Springfield, NJ 07081-3105)",
+    "status": "In Transit - Arriving Soon",
+    "driveTime": "52 hrs (2,956 mi)",
+    "flightTime": "5.5 hrs (SJC to EWR)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      40.6858088,
+      -74.3165272
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_6afe1611d5edc984ab0ca9b438b5dbf5?titleStatus=new&redirect=no#overview"
@@ -152,13 +152,13 @@ const TESLA_INVENTORY = [
     "matches": [
       "White Interior"
     ],
-    "location": "Unavailable",
-    "status": "This vehicle is not available for your registration ZIP Code.",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
+    "status": "In Transit - Arriving Soon",
+    "driveTime": "53 hrs (2,973 mi)",
+    "flightTime": "5.5 hrs (SJC to JFK)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      40.6717749,
+      -73.993943
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_1544f0bc7ba8c65e0ca109c503617b94?titleStatus=new&redirect=no#overview"
@@ -173,13 +173,13 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Tesla Mohegan Sun (1 Mohegan Sun Blvd, Uncasville, CT 06382)",
+    "status": "In Transit - Arriving Soon",
+    "driveTime": "55 hrs (3,094 mi)",
+    "flightTime": "5.5 hrs (SJC to BDL)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      41.4911078,
+      -72.0897434
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4228e175f8ab2f357dedf831aa25e9f?titleStatus=new&redirect=no#overview"
@@ -215,13 +215,13 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "50 hrs (2,979 mi)",
-    "flightTime": "5.5 hrs (SJC to Airport)",
+    "location": "Springfield, NJ (135 US 22, Springfield, NJ 07081-3105)",
+    "status": "In Transit - Arriving Soon",
+    "driveTime": "52 hrs (2,956 mi)",
+    "flightTime": "5.5 hrs (SJC to EWR)",
     "coordinates": [
-      37.5202104,
-      29.6711065
+      40.6858088,
+      -74.3165272
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_ee4eca3778e0fe5a3d4230f85dcd573e?titleStatus=new&redirect=no#overview"
