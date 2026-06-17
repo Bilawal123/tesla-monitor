@@ -1,30 +1,5 @@
 const TESLA_INVENTORY = [
   {
-    "vin": "7SAY238_70fd4bfedc5e4fd81066bb0aeb2a1fcc",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 55490,
-    "paint": "Ultra Red",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 3,
-    "matches": [
-      "Ultra Red Paint",
-      "19\" Wheels",
-      "White Interior"
-    ],
-    "location": "Dallas (6500 Cedar Springs Road, Dallas, TX 75235)",
-    "status": "Available for faster pick up",
-    "driveTime": "29 hrs (1,657 mi)",
-    "flightTime": "3.5 hrs (SJC to DFW)",
-    "coordinates": [
-      32.8324173,
-      -96.8376053
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY238_70fd4bfedc5e4fd81066bb0aeb2a1fcc?titleStatus=new&redirect=no#overview"
-  },
-  {
     "vin": "7SAY238_57c3b8f722e2e163d654d522752f587e",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
@@ -37,40 +12,16 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "19\" Wheels"
     ],
-    "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
-    "status": "In Transit - Arriving Soon",
-    "driveTime": "42 hrs (2,900 mi)",
-    "flightTime": "5.5 hrs (SJC to JFK)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      40.6782,
-      -73.9442
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_57c3b8f722e2e163d654d522752f587e?titleStatus=new&redirect=no#overview"
-  },
-  {
-    "vin": "7SAY238_e3d35d297db03a0b4cb7c5cbdea419a2",
-    "trim": "Premium All-Wheel Drive",
-    "seats": 7,
-    "price": 55490,
-    "paint": "Quicksilver",
-    "wheels": "19’’ Crossflow Wheels",
-    "interior": "Black and White Premium Interior",
-    "similarityScore": 2,
-    "matches": [
-      "19\" Wheels",
-      "White Interior"
-    ],
-    "location": "Houston (19820 Hempstead Hwy, Houston, TX 77065-5338)",
-    "status": "Available for faster pick up",
-    "driveTime": "32 hrs (1,845 mi)",
-    "flightTime": "3.5 hrs (SJC to DFW)",
-    "coordinates": [
-      29.9126543,
-      -95.6154015
-    ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PN00,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY238_e3d35d297db03a0b4cb7c5cbdea419a2?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY238_0eda2b26d717f8bbb81f4855e3af2064",
@@ -85,13 +36,13 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Tesla Doral (9950 NW 25TH ST, DORAL, FL 33172)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "53 hrs (2,972 mi)",
-    "flightTime": "5.5 hrs (SJC to TPA)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      25.795897,
-      -80.35769
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_0eda2b26d717f8bbb81f4855e3af2064?titleStatus=new&redirect=no#overview"
@@ -109,13 +60,13 @@ const TESLA_INVENTORY = [
       "Ultra Red Paint",
       "White Interior"
     ],
-    "location": "Springfield, NJ (135 US 22, Springfield, NJ 07081-3105)",
-    "status": "In Transit - Arriving Soon",
-    "driveTime": "52 hrs (2,956 mi)",
-    "flightTime": "5.5 hrs (SJC to EWR)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      40.6858088,
-      -74.3165272
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_b3270c16c15db2e3a50e501a378ad2dc?titleStatus=new&redirect=no#overview"
@@ -134,11 +85,11 @@ const TESLA_INVENTORY = [
     ],
     "location": "Unavailable",
     "status": "Unavailable in CA (cached)",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      null,
-      null
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN01,$SC04,$MDLY,$WY19P,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_450466d1601e88c130a99092e9136704?titleStatus=new&redirect=no#overview"
@@ -155,13 +106,13 @@ const TESLA_INVENTORY = [
     "matches": [
       "White Interior"
     ],
-    "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
-    "status": "In Transit - Arriving Soon",
-    "driveTime": "42 hrs (2,900 mi)",
-    "flightTime": "5.5 hrs (SJC to JFK)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      40.6782,
-      -73.9442
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PN01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4179b0a2bc1903aa0da3eabe4c5856e?titleStatus=new&redirect=no#overview"
@@ -178,23 +129,23 @@ const TESLA_INVENTORY = [
     "matches": [
       "Ultra Red Paint"
     ],
-    "location": "Tesla Brooklyn (106 2nd Ave, Brooklyn, NY 11215)",
-    "status": "In Transit - Arriving Soon",
-    "driveTime": "42 hrs (2,900 mi)",
-    "flightTime": "5.5 hrs (SJC to JFK)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      40.6782,
-      -73.9442
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PR01,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_6afe1611d5edc984ab0ca9b438b5dbf5?titleStatus=new&redirect=no#overview"
   },
   {
-    "vin": "7SAY250_7607267deebb4fac957714c9a59209bb",
+    "vin": "7SAY238_1544f0bc7ba8c65e0ca109c503617b94",
     "trim": "Premium All-Wheel Drive",
     "seats": 7,
-    "price": 58490,
-    "paint": "Quicksilver",
+    "price": 56990,
+    "paint": "Diamond Black",
     "wheels": "20’’ Helix 2.0 Wheels",
     "interior": "Black and White Premium Interior",
     "similarityScore": 1,
@@ -202,15 +153,15 @@ const TESLA_INVENTORY = [
       "White Interior"
     ],
     "location": "Unavailable",
-    "status": "Unavailable in CA (cached)",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "status": "This vehicle is not available for your registration ZIP Code.",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      null,
-      null
+      37.5202104,
+      29.6711065
     ],
-    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
-    "url": "https://www.tesla.com/my/order/7SAY250_7607267deebb4fac957714c9a59209bb?titleStatus=new&redirect=no#overview"
+    "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPW12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
+    "url": "https://www.tesla.com/my/order/7SAY238_1544f0bc7ba8c65e0ca109c503617b94?titleStatus=new&redirect=no#overview"
   },
   {
     "vin": "7SAY238_c4228e175f8ab2f357dedf831aa25e9f",
@@ -222,13 +173,13 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Springfield, NJ (135 US 22, Springfield, NJ 07081-3105)",
-    "status": "In Transit - Arriving Soon",
-    "driveTime": "52 hrs (2,956 mi)",
-    "flightTime": "5.5 hrs (SJC to EWR)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      40.6858088,
-      -74.3165272
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_c4228e175f8ab2f357dedf831aa25e9f?titleStatus=new&redirect=no#overview"
@@ -243,13 +194,13 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Liberty Lake (1805 N PEPPER LN, Liberty Lake, WA 99019-9511)",
-    "status": "Available for Immediate Pick Up",
-    "driveTime": "18 hrs (949 mi)",
-    "flightTime": "2.0 hrs (SJC to SEA)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      47.6739395,
-      -117.1133118
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PX02,$SC04,$MDLY,$WY20B,$STY7S,$CPF0&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY238_d17bf4fe8b009d675cee6a26e035180d?titleStatus=new&redirect=no#overview"
@@ -264,13 +215,13 @@ const TESLA_INVENTORY = [
     "interior": "All Black Premium Interior",
     "similarityScore": 0,
     "matches": [],
-    "location": "Mount Kisco (115 Kisco Avenue, Mount Kisco, NY 10549)",
-    "status": "In Transit - Arriving Soon",
-    "driveTime": "53 hrs (3,002 mi)",
-    "flightTime": "5.5 hrs (SJC to JFK)",
+    "location": "Unavailable",
+    "status": "Unavailable in CA (cached)",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      41.2140074,
-      -73.7264559
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PPSW,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_ee4eca3778e0fe5a3d4230f85dcd573e?titleStatus=new&redirect=no#overview"
@@ -287,11 +238,11 @@ const TESLA_INVENTORY = [
     "matches": [],
     "location": "Unavailable",
     "status": "Unavailable in CA (cached)",
-    "driveTime": "N/A",
-    "flightTime": "N/A",
+    "driveTime": "50 hrs (2,979 mi)",
+    "flightTime": "5.5 hrs (SJC to Airport)",
     "coordinates": [
-      null,
-      null
+      37.5202104,
+      29.6711065
     ],
     "imageUrl": "https://static-assets.tesla.com/v1/compositor/?model=my&view=STUD_3QTR&size=1440&options=$MTY48,$APFA,$IPB12,$PN00,$SC04,$MDLY,$WY20B,$STY7S,$CPF0,$TW01&bkba_opt=1",
     "url": "https://www.tesla.com/my/order/7SAY250_0d237442e833397ca8160052fea78d8a?titleStatus=new&redirect=no#overview"
